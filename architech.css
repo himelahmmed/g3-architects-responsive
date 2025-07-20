@@ -36,7 +36,7 @@
     font-weight: 700;
 }
 
-.navbar, .banner, main{
+.navbar, .banner, main, .footer{
     max-width: 1050px;
     margin: 0 auto;
 }
@@ -119,10 +119,48 @@ main{
     color: #FF900E;
 }
 
+/*features section related style*/
+.features{
+    gap: 70px;
+}
+
+#features-section-title{
+    border-left: 4px solid #FF900E;
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.features-card{
+    padding: 20px;
+    box-shadow: 0 4px 30px 0px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.features-card .features-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+#experience-badge{
+    padding: 20px 20px;
+    margin-left: -70px;
+    margin-top: -70px;
+}
+.experience-year{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.img-container img{
+    height: auto;
+    width: 100%;
+}
+
 /*some fact related styles*/
 .facts-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
 }
 .fact-description{
     max-width: 500px;
@@ -148,8 +186,30 @@ main{
     margin-top: 10px;
 }
 
+/*Sponsors related Styles*/
+.sponsors-info{
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+.sponsors-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsors-company img{
+    filter: grayscale(100%);
+}
 
 /*footer styles*/
+.footer{
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    background-color: #FFF4E7;
+
+}
 
 /*Responsive media query*/
 @media screen and (max-width: 576px) {
@@ -158,13 +218,16 @@ main{
     .team{
         flex-direction: column;
     }
-    .team-img-container, .facts-container{
+    .team-img-container, 
+    .facts-container,
+    .sponsors-company{
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
         margin-left: 20px;
     }
-    .facts-container{
+    .facts-container, 
+    .sponsors-company{
         justify-items: center;
         gap: 10px;
     }
@@ -177,6 +240,9 @@ main{
     }
     .our-features{
         margin-left: 50px auto;
+    }
+    .sponsors-company, .facts-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
